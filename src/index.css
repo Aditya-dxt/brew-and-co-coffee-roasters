@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== GLOBAL RESET ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body, #root {
+  background: #0D0705;
+  font-family: 'Inter', sans-serif;
+  color: #F5E6D3;
+  overflow-x: hidden;
+}
+
+/* ===== GRADIENT TEXT ===== */
+.hero-heading {
+  background: linear-gradient(180deg, #8B5E3C 0%, #D4A574 50%, #F5E6D3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gold-heading {
+  background: linear-gradient(180deg, #C4864D 0%, #F5E6D3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D0705;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8B5E3C;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C4864D;
+}
+
+/* ===== NOISE/GRAIN OVERLAY ===== */
+.grain-overlay {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  animation: grain 8s steps(10) infinite;
+  opacity: 0.5;
+}
+
+/* ===== SELECTION ===== */
+::selection {
+  background: rgba(196, 134, 77, 0.3);
+  color: #F5E6D3;
+}
+
+/* ===== SMOOTH IMAGE LOADING ===== */
+img {
+  transition: opacity 0.4s ease;
+}
+
+img[loading="lazy"] {
+  opacity: 0;
+}
+
+img.loaded,
+img:not([loading="lazy"]) {
+  opacity: 1;
+}
+
+/* ===== HORIZONTAL LINE ANIMATION ===== */
+.animated-line {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #8B5E3C, #D4A574, #8B5E3C, transparent);
+  transform-origin: left;
+}
+
+/* ===== GLOW EFFECTS ===== */
+.coffee-glow {
+  box-shadow: 0 0 60px rgba(196, 134, 77, 0.15), 0 0 120px rgba(139, 94, 60, 0.08);
+}
+
+.text-glow {
+  text-shadow: 0 0 40px rgba(196, 134, 77, 0.3);
+}
+
+/* ===== STEAM ANIMATION ===== */
+.steam-particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, rgba(245, 230, 211, 0.4), transparent);
+  border-radius: 50%;
+  filter: blur(3px);
+}
+
+/* ===== MENU CARD HOVER ===== */
+.menu-card {
+  transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), 
+              box-shadow 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(196, 134, 77, 0.15);
+}
