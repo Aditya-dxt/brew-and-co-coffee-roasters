@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 import { ArrowLeft, MapPin, Clock, Phone, Mail, Calendar } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { FadeIn } from '../components/FadeIn';

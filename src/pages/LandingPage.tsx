@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import HeroSection from '../sections/HeroSection';
 import MarqueeSection from '../sections/MarqueeSection';
 import AboutSection from '../sections/AboutSection';

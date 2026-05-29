@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { motion } from 'framer-motion';
+
 import { ArrowLeft, Coffee, Globe, Heart } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { FadeIn } from '../components/FadeIn';

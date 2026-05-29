@@ -70,6 +70,8 @@ const menuItems: MenuItem[] = [
 ];
 
 const MenuSection: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <section
       id="menu"
