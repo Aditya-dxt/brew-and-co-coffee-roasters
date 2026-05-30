@@ -1,73 +1,55 @@
-# React + TypeScript + Vite
+# Brew & Co. — Artisan Coffee Roasters
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A highly interactive, premium artisan coffee shop web application. Brew & Co. features a gorgeous dark aesthetic, smooth scroll-driven animations, and a custom 3D glassmorphism engine to showcase their signature roasts.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Immersive Animations**: Built with Framer Motion, the site features elegant fade-ins, parallax background images, and smooth scroll animations.
+- **3D Tilt Cards**: The Blends page features a completely custom, interactive 3D card engine. Hovering over coffee bags dynamically tilts them in 3D space with a glassmorphism/parallax illusion.
+- **Interactive Brewing Guides**: A sleek, tabbed interface showcasing step-by-step instructions for brewing with a Chemex, French Press, or V60.
+- **Smart Hash Routing**: Smooth, instant scrolling between different sections of the page without hard browser reloads.
+- **Fully Responsive**: Crafted with Tailwind CSS to ensure a stunning experience on mobile devices, tablets, and massive desktop monitors.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React 18**: The core frontend library.
+- **Vite**: Ultra-fast next-generation frontend tooling.
+- **TypeScript**: For robust, type-safe development.
+- **Tailwind CSS**: Utility-first CSS framework for rapid, beautiful styling.
+- **Framer Motion**: Production-ready animation library used for complex UI interactions and the custom 3D tilt engine.
+- **Lucide React**: Clean, beautiful SVG icons.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+To get a local copy up and running, follow these simple steps.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Aditya-dxt/brew-and-co-coffee-roasters.git
+   ```
+2. Navigate into the project directory:
+   ```bash
+   cd brew-and-co-coffee-roasters
+   ```
+3. Install the NPM packages:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+5. Open your browser and visit `http://localhost:5173` to view the site!
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Deployment
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This project is optimized for deployment on platforms like [Vercel](https://vercel.com/) or [Netlify](https://www.netlify.com/). It has been strictly type-checked to ensure zero build errors during automated CI/CD deployment pipelines.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
